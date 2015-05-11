@@ -31,7 +31,7 @@ if (isset($_REQUEST['_ts'])) {
                     $content = '<h3 id="dbMessageContent">'. $sql . $e->getMessage() . '</h3>';
                 }
 
-                $conn = null;
+                unset($connection);
 
                 $taconite->html('#dbMessage', $content);
                 $taconite->js("$('#dbMessageContent').delay(5000).fadeOut(400);");
