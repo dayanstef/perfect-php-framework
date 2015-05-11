@@ -1,0 +1,29 @@
+<div id="container">
+    <div class="well-lg">
+        <h2>{{pageTitle}}</h2><br>
+
+        <b>JSON Example: </b><br>
+        {{jsonExample}}<br><br>
+
+        <b>JSON Decode: </b>
+        <table class="table table-condensed">
+
+            <thead>
+            <tr>
+                <th data-field="name">Name</th>
+                <th data-field="city">City</th>
+                <th data-field="country">Country</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#jsonDecode}}
+            <tr>
+                <td>{{Name}}</td>
+                <td>{{City}}</td>
+                <td>{{Country}}</td>
+            </tr>
+            {{/jsonDecode}}
+            </tbody>
+        </table>
+    </div>
+</div>
