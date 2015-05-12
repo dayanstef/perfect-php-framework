@@ -2,10 +2,11 @@
     <div class="well-lg">
         <h2>{{pageTitle}}</h2><br>
 
-        <b>JSON Example: </b><br>
+        <b>JSON Example: </b><br><br>
         {{jsonExample}}<br><br>
 
-        <b>JSON Decode: </b>
+        <b>JSON Decode: json_decode()</b><br><br>
+		{{jsonToArray}}<br><br>
         <table class="table table-condensed">
 
             <thead>
@@ -25,5 +26,8 @@
             {{/jsonDecode}}
             </tbody>
         </table>
+
+		<b>JSON Encode: json_encode()</b><br><br>
+		{{arrayToJson}}<br><br>
     </div>
 </div>

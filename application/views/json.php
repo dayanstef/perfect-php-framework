@@ -23,5 +23,7 @@ if ($responseCode == 200) {
 
 $tplvars['jsonExample'] = $json;
 $tplvars['jsonDecode'] = json_decode($json);
+$tplvars['jsonToArray'] = print_r($tplvars['jsonDecode'], true);
+$tplvars['arrayToJson'] = json_encode($tplvars['jsonToArray']);
 
 echo T::mustache($template, $tplvars);
