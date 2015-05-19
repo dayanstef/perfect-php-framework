@@ -1,9 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$template = 'header';
+require_once(APPPATH.'views/login.php');
 
 $tplvars = array();
+
+$tplvars['authenticated'] = USER_AUTH;
+
+$template = 'header';
 
 $tplvars['pageTitle'] = 'Perfect PHP framework!';
 

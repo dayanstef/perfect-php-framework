@@ -1,33 +1,39 @@
-<div id="container">
-    <div class="well-lg">
-        <h2>{{pageTitle}}</h2><br>
+<div class="bs-docs-header" id="content" tabindex="-1">
+    <div class="container">
+        <h1>{{pageTitle}}</h1>
+    </div>
+</div>
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-12" role="main">
+            <h2>JSON Example: </h2>
+            <p>{{jsonExample}}</p>
 
-        <b>JSON Example: </b><br><br>
-        {{jsonExample}}<br><br>
+            <h2>JSON Decode: json_decode()</h2>
+            <p>{{jsonToArray}}</p>
+            <table class="table table-condensed">
 
-        <b>JSON Decode: json_decode()</b><br><br>
-		{{jsonToArray}}<br><br>
-        <table class="table table-condensed">
+                <thead>
+                <tr>
+                    <th data-field="name">Name</th>
+                    <th data-field="city">City</th>
+                    <th data-field="country">Country</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#jsonDecode}}
+                <tr>
+                    <td>{{Name}}</td>
+                    <td>{{City}}</td>
+                    <td>{{Country}}</td>
+                </tr>
+                {{/jsonDecode}}
+                </tbody>
+            </table>
 
-            <thead>
-            <tr>
-                <th data-field="name">Name</th>
-                <th data-field="city">City</th>
-                <th data-field="country">Country</th>
-            </tr>
-            </thead>
-            <tbody>
-            {{#jsonDecode}}
-            <tr>
-                <td>{{Name}}</td>
-                <td>{{City}}</td>
-                <td>{{Country}}</td>
-            </tr>
-            {{/jsonDecode}}
-            </tbody>
-        </table>
+            <h2>JSON Encode: json_encode()</h2>
+            <p>{{arrayToJson}}</p>
 
-		<b>JSON Encode: json_encode()</b><br><br>
-		{{arrayToJson}}<br><br>
+        </div>
     </div>
 </div>

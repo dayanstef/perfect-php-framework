@@ -25,7 +25,8 @@ $( document ).ready(function() {
     });
 
 
-    $('body').on('click', '#actionButton', function () {
+    $('body').on('click', '.actionLink', function (e) {
+        e.preventDefault();
         if ($(this).attr('name') != '') {
             var action = "?action="+ $(this).attr('name');
             var pathname = window.location.pathname+action;

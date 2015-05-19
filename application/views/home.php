@@ -7,4 +7,6 @@ $template = 'home';
 
 $tplvars = array();
 
+$tplvars['authenticated'] = USER_AUTH;
+
 echo T::mustache($template, $tplvars);

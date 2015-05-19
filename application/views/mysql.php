@@ -54,7 +54,7 @@ if (isset($_REQUEST['_ts'])) {
             case 'GetData':
                 $subtemplate = 'datatable';
                 $tplvars['showAlbums'] = true;
-                $tplvars['albums'] = R::getAll('SELECT * FROM album;');
+                $tplvars['albums'] = array('artist'=>'Dejan');//R::getAll('SELECT * FROM album;');
 
                 $form = T::mustache($subtemplate, $tplvars);
                 $taconite->html('#getData', $form);
