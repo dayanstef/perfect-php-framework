@@ -7,7 +7,7 @@ $password = 'password';
 $salt = 'secret_key_on_left';
 $pepa = 'secret_key_on_right';
 
-$hash = password_hash($salt . $password . $pepa, PASSWORD_DEFAULT);
+$hash = md5($salt . $password . $pepa);
 
 function setMyCookie ($hash) {
     setcookie('mCi', $hash, time() + (8640 * 30));
