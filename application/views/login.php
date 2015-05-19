@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$email = 'dayanstef@gmail.com';
+$email = 'demo@mail.com';
 $password = 'password';
 
 $salt = 'secret_key_on_left';
