@@ -1793,3 +1793,7 @@ h1[id] {
     -webkit-box-shadow: 0 0 8px rgba(82, 168, 236, .6);
     box-shadow: 0 0 8px rgba(82, 168, 236, .6)
 }
+
+.logoND {
+    display: inline !important; margin-left: 5px;
+}
